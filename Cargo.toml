@@ -1,0 +1,14 @@
+[package]
+name = "kafka-proxy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenvy = "0.15.7"
+warp = "0.3.5"
+tokio = { version = "1.32.0", features=["full"] }
+rdkafka = { version = "0.36.2", features = ["cmake-build", "ssl"] }
+serde = { version = "1.0.193", features = ["derive"] }
+openssl = { version = "0.10.59", features = ["vendored"] }
